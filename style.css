@@ -1,0 +1,319 @@
+/* Ensure padding, margin reset and apply flex centering */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #202020; /* Slightly lighter black */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the header */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #1E90FF; /* Lighter blue for better contrast */
+    display: flex;
+    align-items: center;
+}
+
+/* Header text styling with imported Google Font */
+h1 {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+
+/* About section container */
+.about-me {
+    margin-top: 10px;
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* Image section styling */
+.myimg {
+    flex: 1 1 300px; /* Flexible with a 300px minimum */
+    max-width: 400px;
+    height: 26rem;
+    width: 35%;
+    margin: 10px;
+    background-image: url('WhatsApp_Image_2024-10-21_at_08.16.26_119091cb-removebg-preview.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.myimg::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%; /* Adjust this to control the gradient height */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #202020 100%);
+}
+
+
+/* Text container and styling */
+.mytext {
+    flex: 2 1 fit-content; /* Flexible with fitting text */
+    max-width: 500px;
+    height: auto;
+    color: white;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main text styling */
+.ab {
+    color: white;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+/* Sub-text styling */
+.subab {
+    color: #d3d3d3; /* Softer light gray for better readability */
+    font-family: sans-serif;
+    margin: 2px;
+    font-size: 14px;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Button container styling */
+.but-div {
+    width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Button styling with hover and active states */
+button {
+    width: 40%;
+    height: 50px;
+    background-color: #1E90FF; /* Lighter blue */
+    color: white;
+    font-family: sans-serif;
+    font-weight: bolder;
+    border: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #00BFFF; /* Brighter blue for hover */
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #4682B4; /* Active state color */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .myimg, .mytext {
+        width: 80%; /* Increased width for better scaling */
+    }
+}
+
+@media (max-width: 480px) {
+    .myimg, .mytext {
+        width: 90%;
+    }
+    
+    button {
+        width: 80%; /* Increased button size on smaller screens */
+        font-size: 16px;
+    }
+}
+
+.skills {
+    width: 80%;
+    font-family: sans-serif;
+    font-weight: bolder;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.skills-list li {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: scale(1.1);
+}
+/*  */
+
+.skills-list li i {
+    font-size: 40px;
+    margin-right: 10px;
+    color: #1E90FF; /* Customize icon color */
+}
+
+.skills-list li i:hover{
+    color:#32CD32;
+}
+
+/* Media Query for devices with max width of 768px (tablets and smaller screens) */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-list li {
+        margin: 15px 0;
+    }
+
+    .skills-list li i {
+        font-size: 35px;
+    }
+}
+
+/* Media Query for devices with max width of 480px (mobile phones) */
+@media (max-width: 480px) {
+    .skills h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-list li i {
+        font-size: 30px;
+    }
+
+    .skills-list li {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+}
+
+.Career-Highlights{
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+.Career-Highlights h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.socials {
+    width: 70%;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    margin: 30px auto;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #f0f0f0;
+}
+
+.socials-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.socials-list li {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.socials-list li:hover {
+    transform: scale(1.1);
+}
+
+.socials-list li i {
+    font-size: 45px;
+    margin-bottom: 10px;
+    color:  #1E90FF; 
+}
+
+a{
+    text-decoration: none;
+}
+
+.socials-list li span {
+    margin-top: 5px;
+    color: #e0e0e0;
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 768px) {
+    .socials-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socials-list li {
+        margin: 20px 0;
+    }
+
+    .socials-list li i {
+        font-size: 40px;
+    }
+}
